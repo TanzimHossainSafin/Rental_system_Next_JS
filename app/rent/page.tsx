@@ -1,10 +1,10 @@
-import SignUp from "../Components/signup/page";
 
-export default function Rent(){
+
+export default async function Rent(){
     return(
         <div>
             This is rent page
-            <SignUp />
+            
         </div>
     )
 

@@ -1,15 +1,7 @@
 import { signIn } from 'next-auth/react';
 
 export default function SignUp() {
-  function signINButton(){
-    return(
-      <form action={async()=>{
-        "use server";
-        await signIn();
-      }}
-    />
-    )
-  }
+
   return (
     
     <div>

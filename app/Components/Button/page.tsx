@@ -1,5 +1,5 @@
 "use client"
-import { signIn } from "next-auth/react";
+import { signIn, signOut } from "next-auth/react";
 
 interface ButtonProps {
     title: string;
@@ -8,10 +8,13 @@ interface ButtonProps {
     paddin:string;
 }
 
-export default function Button({ title, size, color,paddin }: ButtonProps) {
-   
+export default function Button({ title, size, color, paddin }: ButtonProps) {
     return (
-        <button onClick={() => signIn()}type="submit" className={`cursor-pointer ${size} ${color} ${paddin} rounded `}>
+        <button
+            onClick={() => title === "Login" ? signIn() : signOut()}
+            type="submit"
+            className={`cursor-pointer ${size} ${color} ${paddin} rounded`}
+        >
             {title}
         </button>
     );

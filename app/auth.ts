@@ -5,14 +5,17 @@ import { PrismaClient } from "@prisma/client";
 import NextAuth from "next-auth";
 const prisma = new PrismaClient();
 const auth = NextAuth({
+ 
   providers:[
 
   CredentialsProvider({
    
     name: "email",
+    
     credentials: {
       username: { label: "Username", type: "text", placeholder: "tanzim" },
       password: { label: "Password", type: "password" }
+        
     },
     async authorize(credentials, req) {
       const username=credentials?.username;
@@ -40,6 +43,15 @@ const auth = NextAuth({
           }),
           
   ],
+  //@ts-ignore
+  // pages: {
+  //   signIn: "/Components/signin", 
+  // },
+  // callbacks: {
+  //   async redirect({ url, baseUrl }) {
+  //     // Redirect to the homepage after sign-in
+  //     return baseUrl;
+  //   },
   secret: process.env.NEXTAUTH_SECRET || " "
 });
 
