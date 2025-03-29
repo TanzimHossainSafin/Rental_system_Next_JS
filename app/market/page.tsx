@@ -1,5 +1,5 @@
 import prisma from "@/lib/prisma";
-import SignUp from "../Components/signup/page";
+
 
 export default async function Market(){
     const user=await prisma.user.findFirst({

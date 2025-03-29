@@ -17,4 +17,16 @@ model user{
   username  String @unique
   password  String 
 
+  Market Market[]
+}
+model rent{
+  id        Int   @id @default(autoincrement())
+  location String
+  price    Int
+  ownername String
+}
+model Market {
+  id        Int    @id @default(autoincrement())
+  user      user   @relation(fields: [hiredOwner], references: [username])
+  hiredOwner String @unique
 }
