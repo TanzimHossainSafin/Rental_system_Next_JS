@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req:NextRequest){
    const body=await req.json();
    const location=body.location;
-   const price=body.price;
+   const price=parseInt(body.price);
    const ownername=body.ownername;
    console.log(location, price, ownername);
    const rent=await prisma.rent.create({
