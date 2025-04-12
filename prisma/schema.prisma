@@ -30,3 +30,15 @@ model Market {
   user      user   @relation(fields: [hiredOwner], references: [username])
   hiredOwner String @unique
 }
+model Review{
+    id        Int    @id @default(autoincrement())
+    
+}
+model User_Provider{
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}

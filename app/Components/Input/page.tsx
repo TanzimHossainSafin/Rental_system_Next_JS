@@ -8,7 +8,7 @@ interface InputType {
 const InputPage = forwardRef<HTMLInputElement, InputType>(
   function InputPage({ type, placeholder }, ref) {
     return (
-      <div className="bg-red-500">
+      <div className="m-4 p-4">
         <input 
           ref={ref}
           type={type || "text"} 
