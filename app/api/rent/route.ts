@@ -5,7 +5,7 @@ export async function POST(req:NextRequest){
    const location=body.location;
    const price=parseInt(body.price);
    const ownername=body.ownername;
-   console.log(location, price, ownername);
+   
    const rent=await prisma.rent.create({
     data:{
         location,
@@ -13,6 +13,6 @@ export async function POST(req:NextRequest){
         ownername
     }
    });
-   console.log(rent);
+   
    return NextResponse.json ({message:"data received successfully",location,price,ownername}); 
 }

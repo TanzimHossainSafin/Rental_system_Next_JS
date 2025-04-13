@@ -30,10 +30,6 @@ model Market {
   user      user   @relation(fields: [hiredOwner], references: [username])
   hiredOwner String @unique
 }
-model Review{
-    id        Int    @id @default(autoincrement())
-    
-}
 model User_Provider{
   id            String    @id @default(cuid())
   name          String?
@@ -41,4 +37,16 @@ model User_Provider{
   emailVerified String?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
+  review review[]
 }
+model review{
+  id Int @id @default(autoincrement())
+  title String 
+  description String
+  content String
+  useremail User_Provider @relation(fields: [ReviewEmail], references: [email])
+  ReviewEmail String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+

@@ -25,7 +25,7 @@ export default function Navbar() {
         <Link href="/rent">Rent</Link>
       </div>
       <div>
-        <Link href="/blogs">Review</Link>
+        <Link href="/review">Review</Link>
       </div>
       <div className="flex gap-5 ">
         <div>
