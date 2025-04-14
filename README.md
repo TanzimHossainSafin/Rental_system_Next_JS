@@ -1,3 +1,6 @@
+This project is a Rental System built using Next.js and TypeScript. It provides a comprehensive platform for managing rental properties, bookings, and user interactions. The system leverages modern web technologies to create a seamless and efficient experience for both property owners and renters.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
