@@ -5,7 +5,7 @@ export async function POST(req:NextRequest){
    const location=body.location;
    const price=parseInt(body.price);
    const ownername=body.ownername;
-   
+   const email=body.email;
    const rent=await prisma.rent.create({
     data:{
         location,
